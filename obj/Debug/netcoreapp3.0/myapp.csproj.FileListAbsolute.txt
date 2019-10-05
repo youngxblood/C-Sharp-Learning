@@ -9,3 +9,14 @@ C:\Mark\Programming\C#_Tutorials\myapp\obj\Debug\netcoreapp3.0\myapp.AssemblyInf
 C:\Mark\Programming\C#_Tutorials\myapp\obj\Debug\netcoreapp3.0\myapp.AssemblyInfo.cs
 C:\Mark\Programming\C#_Tutorials\myapp\obj\Debug\netcoreapp3.0\myapp.dll
 C:\Mark\Programming\C#_Tutorials\myapp\obj\Debug\netcoreapp3.0\myapp.pdb
+C:\Mark\Programming\C#\C#_Learning\bin\Debug\netcoreapp3.0\myapp.exe
+C:\Mark\Programming\C#\C#_Learning\bin\Debug\netcoreapp3.0\myapp.deps.json
+C:\Mark\Programming\C#\C#_Learning\bin\Debug\netcoreapp3.0\myapp.runtimeconfig.json
+C:\Mark\Programming\C#\C#_Learning\bin\Debug\netcoreapp3.0\myapp.runtimeconfig.dev.json
+C:\Mark\Programming\C#\C#_Learning\bin\Debug\netcoreapp3.0\myapp.dll
+C:\Mark\Programming\C#\C#_Learning\bin\Debug\netcoreapp3.0\myapp.pdb
+C:\Mark\Programming\C#\C#_Learning\obj\Debug\netcoreapp3.0\myapp.csprojAssemblyReference.cache
+C:\Mark\Programming\C#\C#_Learning\obj\Debug\netcoreapp3.0\myapp.AssemblyInfoInputs.cache
+C:\Mark\Programming\C#\C#_Learning\obj\Debug\netcoreapp3.0\myapp.AssemblyInfo.cs
+C:\Mark\Programming\C#\C#_Learning\obj\Debug\netcoreapp3.0\myapp.dll
+C:\Mark\Programming\C#\C#_Learning\obj\Debug\netcoreapp3.0\myapp.pdb

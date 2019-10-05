@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Mark\\Programming\\C#_Tutorials\\myapp\\myapp.csproj": {}
+    "C:\\Mark\\Programming\\C#\\C#_Learning\\myapp.csproj": {}
   },
   "projects": {
-    "C:\\Mark\\Programming\\C#_Tutorials\\myapp\\myapp.csproj": {
+    "C:\\Mark\\Programming\\C#\\C#_Learning\\myapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mark\\Programming\\C#_Tutorials\\myapp\\myapp.csproj",
+        "projectUniqueName": "C:\\Mark\\Programming\\C#\\C#_Learning\\myapp.csproj",
         "projectName": "myapp",
-        "projectPath": "C:\\Mark\\Programming\\C#_Tutorials\\myapp\\myapp.csproj",
+        "projectPath": "C:\\Mark\\Programming\\C#\\C#_Learning\\myapp.csproj",
         "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
-        "outputPath": "C:\\Mark\\Programming\\C#_Tutorials\\myapp\\obj\\",
+        "outputPath": "C:\\Mark\\Programming\\C#\\C#_Learning\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
