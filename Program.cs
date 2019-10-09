@@ -1,55 +1,76 @@
-﻿using System;
+using System;
+using System.Text;
 
 namespace myapp
 {
+    /// <summary>
+    /// This program was for a challenge to parse an input string
+    ///  and return it with characters multiplied by an int.
+    /// </summary>
+
     class Program
     {
-
-        public static int[] IndexOfCapitals (string str)
+        // REVIEW:  The function below was something I saw online.
+        //          I would like to study it a bit.
+        //          in: string[]
+        //          out: string
+        static string ConvertStringArrayToString(string[] inputArr)
         {
-            // capitalIndex = a character array of the user's input string
-            char[] capitalIndex = str.ToCharArray ();
-            // capitalResult is used to hold
-            string resultString = "";
-            // int[] capitalResult = new int[1];  MIGHT HAVE TO BRING BACK
-            // int arrCounter = 0; MIGHT HAVE TO BRING BACK
-
-            for (int i = 0; i < capitalIndex.Length; i++)
+            // Concatenate all the elements into a StringBuilder.
+            StringBuilder sb = new StringBuilder();
+            foreach (string value in inputArr)
             {
-                bool isUpper = Char.IsUpper (capitalIndex[i]);
+                sb.Append(value);
+                // sb.Append('.');
+            }
+            return sb.ToString();
+        }
 
-                if (isUpper == true)
+        // SECTION: Function that takes two params and returns a string.
+        //          in: string str
+        //          in: int num
+        //          out: string
+        public static string Repeat(string str, int num)
+        {
+            string charMultiplied = "";
+            StringBuilder sb = new StringBuilder(charMultiplied);
+            char[] charArr = str.ToCharArray();
+            string[] strArr = new string[str.Length];
+
+            for (int i = 0; i < charArr.Length; i++)
+            {
+
+                for (int a = 0; a < num; a++)
                 {
-                    int a = Array.IndexOf (capitalIndex, capitalIndex[i]); // This is working correctly!
-                    // Array.Resize(ref capitalResult, capitalResult.Length + arrCounter); MIGHT HAVE TO BRING BACK
-                    // capitalResult[arrCounter] = a;  MIGHT HAVE TO BRING BACK
-                    resultString = resultString + a + " ";
-                    // arrCounter++;
+                    sb.Append(charArr[i]);
+                    charMultiplied = sb.ToString();
+                }
+
+                if (string.IsNullOrWhiteSpace(charMultiplied))
+                {
+                    strArr[i] = " ";
+                    sb.Clear();
                 }
                 else
                 {
-                    isUpper = false;
+                    strArr[i] = charMultiplied;
+                    sb.Clear();
                 }
             }
 
-            resultString = resultString.Trim();
-            string[] stringArr = resultString.Split(" ");
-            int[] resultArr = new int[stringArr.Length];
-
-            for (int i = 0; i < stringArr.Length; i++)
-            {
-                resultArr[i] = stringArr[i];
-            }
-            
-            return capitalResult;
+            string finalResult = ConvertStringArrayToString(strArr).Trim();
+            return finalResult;
         }
+
         // Main program here
-        static void Main (string[] args)
+        static void Main(string[] args)
         {
-            string str = "TestStringGGG";
-            int[] result = IndexOfCapitals (str);
-            Console.ReadLine ();
-        }
+            string input = "Test repeat.";
+            string output = Repeat(input, 5);
 
+            System.Console.WriteLine("The program has started!");
+            System.Console.WriteLine(output);
+            Console.ReadLine();
+        }
     }
 }
