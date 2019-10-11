@@ -1,76 +1,59 @@
 using System;
 using System.Text;
 
+// SECTION 
+// Capitalize the First Letter of Each Word
+// https://edabit.com/challenge/uz4r69EHHSQMosT8D
+
 namespace myapp
 {
-    /// <summary>
-    /// This program was for a challenge to parse an input string
-    ///  and return it with characters multiplied by an int.
-    /// </summary>
-
     class Program
     {
-        // REVIEW:  The function below was something I saw online.
-        //          I would like to study it a bit.
-        //          in: string[]
-        //          out: string
-        static string ConvertStringArrayToString(string[] inputArr)
+        static string ForceFirstCharToUpper(string word)
         {
-            // Concatenate all the elements into a StringBuilder.
-            StringBuilder sb = new StringBuilder();
-            foreach (string value in inputArr)
+            char[] letters = word.ToCharArray();
+            if (Char.IsNumber(letters[0]))
+                return word;
+            else
             {
-                sb.Append(value);
-                // sb.Append('.');
-            }
-            return sb.ToString();
-        }
-
-        // SECTION: Function that takes two params and returns a string.
-        //          in: string str
-        //          in: int num
-        //          out: string
-        public static string Repeat(string str, int num)
-        {
-            string charMultiplied = "";
-            StringBuilder sb = new StringBuilder(charMultiplied);
-            char[] charArr = str.ToCharArray();
-            string[] strArr = new string[str.Length];
-
-            for (int i = 0; i < charArr.Length; i++)
-            {
-
-                for (int a = 0; a < num; a++)
-                {
-                    sb.Append(charArr[i]);
-                    charMultiplied = sb.ToString();
-                }
-
-                if (string.IsNullOrWhiteSpace(charMultiplied))
-                {
-                    strArr[i] = " ";
-                    sb.Clear();
-                }
-                else
-                {
-                    strArr[i] = charMultiplied;
-                    sb.Clear();
-                }
+                letters[0] = Char.ToUpper(letters[0]);
+                string resultStr = new string(letters);
+                return resultStr;
             }
 
-            string finalResult = ConvertStringArrayToString(strArr).Trim();
-            return finalResult;
         }
+
+        public static string MakeTitle(string str)
+        {
+            string[] strArr = str.Split(" ");
+
+            for (int i = 0; i < strArr.Length; i++)
+            {
+                strArr[i] = ForceFirstCharToUpper(strArr[i]);
+            }
+
+            string resultStr = string.Join(" ", strArr);
+            return resultStr;
+        }
+
+        // public static string MakeTitle(string str)
+        // {
+        //     string[] strArr = str.Split(" ");
+        //     StringBuilder sb = new StringBuilder(); 
+
+        //     for (int i = 0; i < strArr.Length; i++)
+        //     {
+        //         strArr[i] = strArr[i].ToLower();
+        //         sb = strArr[i].ToString();
+        //     }
+        // }
 
         // Main program here
         static void Main(string[] args)
         {
-            string input = "Test repeat.";
-            string output = Repeat(input, 5);
-
-            System.Console.WriteLine("The program has started!");
-            System.Console.WriteLine(output);
-            Console.ReadLine();
+            string testStr = "test TeEEst";
+            System.Console.WriteLine(MakeTitle(testStr));
         }
+
     }
 }
