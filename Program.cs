@@ -1,87 +1,60 @@
 using System;
 
-// Resources:
-// String.EndsWith Method: https://docs.microsoft.com/en-us/dotnet/api/system.string.endswith?view=netframework-4.8
-
 namespace myapp
 {
     class Program
     {
-        // Function that limits the '!' or '?' characters at the end of the last word in a sentence to 1
-        // TODO: Figure out a more elegant solution
-        public static string NoYelling(string phrase)
+        public static string FormatNum(int num)
         {
-            string[] stringArr = phrase.Split(' ');
-            string lastWord = stringArr[stringArr.Length - 1].Trim();
+            int numberOfCommas;
+            char[] charArr = num.ToString().ToCharArray();
+            string resultStr = new string(charArr);
 
-            if (lastWord.EndsWith("?"))
-            {
-                do
-                {
-                    lastWord = lastWord.Remove(lastWord.Length - 1);
-                } while (lastWord.EndsWith("?") || lastWord.EndsWith("!"));
+            System.Console.WriteLine("The array length is: " + charArr.Length);
 
-                lastWord = lastWord + "?";
-            }
+            // value = 1234567890;
+            //  Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture));	
+            //  Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
+            //                                  "{0:0,0}", value));
 
-            else if (lastWord.EndsWith("!"))
-            {
-                do
-                {
-                    lastWord = lastWord.Remove(lastWord.Length - 1);
-                } while (lastWord.EndsWith("?") || lastWord.EndsWith("!"));
+            // string input = Console.ReadLine();
+            // int numOfDigits = input.Count(char.IsDigit);
 
-                lastWord = lastWord + "!";
-            }
+            int numRes = num.ToString("N3", en - US);
+            resultStr = String.Format("{0:0,00}", resultStr);
 
-            stringArr[stringArr.Length - 1] = lastWord;
-            string result = string.Join(" ", stringArr);
-            return result;
+            // int numOfDigits = input.Count(char.IsDigit);
+            // if (charArr.Length >= 4)
+            // {
+            //     // if ()
+            //     numberOfCommas = (charArr.Length / 4);
+            //     System.Console.WriteLine("This should need: " + numberOfCommas + " commas.");
+            // }
+            return resultStr;
         }
         // Main program here
         static void Main(string[] args)
         {
-            string inputStr1 = "This is a test string.";
-            string inputStr2 = "This is a test string!!!!!!";
-            string inputStr3 = "This is a test string?????";
-            string inputStr4 = "This is a test string!!??!";
-
-            System.Console.WriteLine(NoYelling(inputStr1));
-            System.Console.WriteLine(NoYelling(inputStr2));
-            System.Console.WriteLine(NoYelling(inputStr3));
-            System.Console.WriteLine(NoYelling(inputStr4));
-
+            System.Console.WriteLine(FormatNum(10000));
+            System.Console.WriteLine(FormatNum(1002340000));
+            System.Console.WriteLine(FormatNum(1000));
+            System.Console.WriteLine(FormatNum(1));
+            System.Console.WriteLine(FormatNum(10));
         }
 
     }
 }
 
-// public static string NoYelling(string phrase)
+// public class Tests
 // {
-//     string[] stringArr = phrase.Split(' ');
-//     string lastWord = stringArr[stringArr.Length - 1].Trim();
-
-//     if (lastWord.EndsWith("?"))
+//     [Test]
+//     [TestCase(1000, Result = "1,000")]
+//     [TestCase(1000000, Result = "1,000,000")]
+//     [TestCase(20, Result = "20")]
+//     [TestCase(0, Result = "0")]
+//     [TestCase(12948, Result = "12,948")]
+//     public static string FixedTest(int num)
 //     {
-//         do
-//         {
-//             lastWord = lastWord.Remove(lastWord.Length - 1);
-//         } while (lastWord.EndsWith("?") || lastWord.EndsWith("!"));
-
-//         lastWord = lastWord + "?";
+//         return Program.FormatNum(num);
 //     }
-
-//     else if (lastWord.EndsWith("!"))
-//     {
-//         do
-//         {
-//             lastWord = lastWord.Remove(lastWord.Length - 1);
-//         } while (lastWord.EndsWith("?") || lastWord.EndsWith("!"));
-
-//         lastWord = lastWord + "!";
-//     }
-
-//     stringArr[stringArr.Length - 1] = lastWord;
-//     string result = new string(String.Join(' ', stringArr));
-//     return result;
 // }

@@ -11,5 +11,8 @@ Notes:
 C# Edabit Challenges:
 Link: https://edabit.com/challenges
     ✔ Double Letters - Create a function that takes a word and returns true if the word has two consecutive identical letters. @done (2019-10-19, 6:38:00 p.m.)
-    ☐ No Yelling - Create a function that transforms sentences ending with multiple question marks ? or exclamation marks ! into a sentence only ending with one. @started(19-10-19 19:09)
+    ✔ No Yelling - Create a function that transforms sentences ending with multiple question marks ? or exclamation marks ! into a sentence only ending with one. @started(19-10-19 19:09) @done(19-10-19 23:09) @lasted(4h5s)
     ☐ Reverse the Order of Words with Five Letters or More - This is already complete, but I want to refactor now that I know more
+    ✔ Find the Smallest Number in an Array - Create a function that takes an array of numbers and returns the smallest number in the set. @done(19-10-19 20:45)
+    ☐ *Format Number with Comma(s) Separating Thousands* - Create a function that takes a number as an argument and returns a string formatted to separate thousands. @started(19-10-19 22:42)
+Archive:
