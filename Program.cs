@@ -35,7 +35,7 @@ namespace myapp
             }
 
             stringArr[stringArr.Length - 1] = lastWord;
-            string result = string.Join(' ', stringArr);
+            string result = string.Join(" ", stringArr);
             return result;
         }
         // Main program here
