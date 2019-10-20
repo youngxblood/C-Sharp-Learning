@@ -7,6 +7,8 @@
 
 //         // Method to reverse a string, then return it as a new string
 //         public string ReverseString (string input, int charCap)
+
+// TODO: Refactor this shitty code now that I know more
 //         {
 
 //             string s;
